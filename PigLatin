@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class PigLatin
+{
+   public static void main(String[] args)
+   {
+       Scanner scan = new Scanner(System.in);
+       while (true) {
+            System.out.println("Insert a word here to transform it into Pig Latin:");
+            String word = scan.nextLine();
+            int wordLength = word.length();
+            String firstLetter = word.substring(0,1);
+            String wordMinusFirstLetter = word.substring(1, wordLength);
+            String pigLatin = wordMinusFirstLetter + firstLetter + "ay";
+            System.out.println(word + " in Pig Latin is " + pigLatin);
+        }
+        
+   }
+}
